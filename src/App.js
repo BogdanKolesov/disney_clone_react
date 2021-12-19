@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header/';
+import Home from './components/Header/Home';
 import { GlobalTheme } from './themes/GlobalTheme';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <GlobalTheme />
       <Header />
+      <Home />
     </>
   );
 }

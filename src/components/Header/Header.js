@@ -1,11 +1,23 @@
 import React from 'react';
-import { Container } from './Header.styles';
+import { headerData } from '../../data/headerData';
+import { Nav, Logo, NavMenu } from './Header.styles';
 
 const Header = () => {
     return (
-        <Container>
+        <Nav>
+            <Logo src='assets/images/logo.svg' alt='Logo' />
+            <NavMenu >
+                {
+                    headerData.map((data, index) => (
+                        <a key={index} href={data.link}>
+                            <img src={data.icon} alt='' />
+                            <span>{data.text}</span>
+                        </a>
+                    ))
+                }
+            </NavMenu>
 
-        </Container>
+        </Nav>
     );
 }
 

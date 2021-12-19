@@ -1,6 +1,6 @@
 import React from 'react';
 import { headerData } from '../../data/headerData';
-import { Nav, Logo, NavMenu } from './Header.styles';
+import { Nav, Logo, NavMenu, UserImg } from './Header.styles';
 
 const Header = () => {
     return (
@@ -16,7 +16,7 @@ const Header = () => {
                     ))
                 }
             </NavMenu>
-
+            <UserImg src='https://sun9-88.userapi.com/impg/GuwxllhGItnrGieIqWheGO4zEnclzSUNBkezow/iBfdiEziTRE.jpg?size=867x1080&quality=96&sign=5b8702ff398afc97941e0980cddb5d8c&type=album' />
         </Nav>
     );
 }

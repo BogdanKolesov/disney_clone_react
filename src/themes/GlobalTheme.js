@@ -16,6 +16,7 @@ export const GlobalTheme = createGlobalStyle`
     }
     body{
         color: #fff;
+        background-color: #040714;
     }
     a{
         color: #fff;

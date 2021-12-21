@@ -17,6 +17,7 @@ export const GlobalTheme = createGlobalStyle`
     body{
         color: #fff;
         background-color: #040714;
+        overflow-x: hidden;
     }
     a{
         color: #fff;

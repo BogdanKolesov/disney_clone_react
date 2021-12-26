@@ -31,8 +31,6 @@ export const CTA = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 100px;
-
 `
 export const CTALogoOne = styled.img`
 
@@ -69,5 +67,5 @@ export const Description = styled.p`
 `
 
 export const CTALogoTwo = styled.img`
-    
+    width: 90%;
 `

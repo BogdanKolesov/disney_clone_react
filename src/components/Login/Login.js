@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container } from './Login.styles';
 
 const Login = () => {
     return (
-        <div>
+        <Container>
 
-        </div>
+        </Container>
     );
 }
 

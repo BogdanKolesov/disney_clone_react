@@ -2,7 +2,7 @@ export const headerData = [
     {
         text: 'Home',
         icon: 'assets/images/home-icon.svg',
-        link: ''
+        link: '/'
     },
     {
         text: 'Search',

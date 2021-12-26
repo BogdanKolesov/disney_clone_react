@@ -20,7 +20,7 @@ const Detail = () => {
                     <span>Trailer</span>
                 </TrailerButton>
                 <AddButton>
-                    <img src='/assets/images/plus.png' alt='' />
+                    <span>+</span>
                 </AddButton>
                 <GroupWatchButton>
 

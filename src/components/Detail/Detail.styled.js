@@ -72,7 +72,25 @@ export const TrailerButton = styled(StyledButton)`
 `
 
 export const AddButton = styled.button`
+    margin-right: 16px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 110ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
+    span{
+        font-size: 30px;
+        color: #fff;
+    }
+    &:hover{
+        scale: 1.15;
+    }
 `
 
 export const GroupWatchButton = styled.button`

@@ -96,3 +96,16 @@ export const AddButton = styled.button`
 export const GroupWatchButton = styled(AddButton)`
     background: rgba(0, 0, 0, 0.8);
 `
+
+export const SubTitle = styled.p`
+    color: rgb(249, 249, 249);
+    font-size: 15px;
+    min-height: 20px;
+    margin-top: 26px;
+`
+export const Description = styled.p`
+    line-height: 1.4;
+    font-size: 18px;
+    margin-top: 16px;
+    color: rgb(249, 249, 249);
+`

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Background, ImageTitle, Controls, PlayButton, TrailerButton, AddButton, GroupWatchButton } from './Detail.styled';
+import { Container, SubTitle, Description, Background, ImageTitle, Controls, PlayButton, TrailerButton, AddButton, GroupWatchButton } from './Detail.styled';
 
 const Detail = () => {
     return (
@@ -26,6 +26,12 @@ const Detail = () => {
                     <img src='/assets/images/group-icon.png' alt='' />
                 </GroupWatchButton>
             </Controls>
+            <SubTitle>
+                1990 / 10m / Family, Comedy, Animation
+            </SubTitle>
+            <Description>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quo nemo iste nostrum ex, quis suscipit facere earum nam perspiciatis labore sed ab eveniet amet excepturi aliquam ad saepe dolorem temporibus odio reiciendis, beatae quia. Mollitia ullam molestiae repellendus facilis.
+            </Description>
         </Container>
     );
 }

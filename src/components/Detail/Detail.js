@@ -12,13 +12,15 @@ const Detail = () => {
             </ImageTitle>
             <Controls>
                 <PlayButton>
-
+                    <img src='/assets/images/play-icon-black.png' alt='' />
+                    <span>Play</span>
                 </PlayButton>
                 <TrailerButton>
-
+                    <img src='/assets/images/play-icon-white.png' alt='' />
+                    <span>Trailer</span>
                 </TrailerButton>
                 <AddButton>
-
+                    <img src='/assets/images/plus.png' alt='' />
                 </AddButton>
                 <GroupWatchButton>
 

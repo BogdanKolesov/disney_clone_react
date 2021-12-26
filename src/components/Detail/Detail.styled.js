@@ -33,20 +33,48 @@ export const ImageTitle = styled.div`
 `
 
 export const Controls = styled.div`
+    display: flex;
+    align-items: center;
+`
+const StyledButton = styled.button`
+    border-radius: 4px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border: none;
+    padding: 0 24px;
+    margin-right: 22px;
+    letter-spacing: 1.8px;
+    cursor: pointer;
+    transition: all 110ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+
+    span{
+        text-transform: uppercase;
+    }
+`
+
+export const PlayButton = styled(StyledButton)` 
+    background: rgb(249, 249, 249);
+    &:hover{
+        background: rgb( 198, 198, 198);
+    }
+`
+
+export const TrailerButton = styled(StyledButton)`
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(249, 249, 249);
+    color: rgb(249, 249, 249);
+
+    &:hover{
+        background: rgba(249, 249, 249, 0.6);
+    }
+`
+
+export const AddButton = styled.button`
 
 `
-export const PlayButton = styled.div`
 
-`
-
-export const TrailerButton = styled.div`
-
-`
-
-export const AddButton = styled.div`
-
-`
-
-export const GroupWatchButton = styled.div`
+export const GroupWatchButton = styled.button`
 
 `

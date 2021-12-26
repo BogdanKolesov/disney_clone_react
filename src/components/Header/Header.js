@@ -5,7 +5,9 @@ import { Nav, Logo, NavMenu, UserImg } from './Header.styles';
 const Header = () => {
     return (
         <Nav>
-            <Logo src='assets/images/logo.svg' alt='Logo' />
+            <Logo to='/'>
+                <img src='assets/images/logo.svg' alt='Logo' />
+            </Logo>
             <NavMenu >
                 {
                     headerData.map((data, index) => (

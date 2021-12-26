@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
     height: 70px;
@@ -11,8 +12,11 @@ export const Nav = styled.nav`
     
 `
 
-export const Logo = styled.img`
+export const Logo = styled(Link)`
     width: 80px;
+    img{
+        width: 100%;
+    }
 `
 
 export const NavMenu = styled.div`

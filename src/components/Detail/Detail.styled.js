@@ -93,6 +93,6 @@ export const AddButton = styled.button`
     }
 `
 
-export const GroupWatchButton = styled.button`
-
+export const GroupWatchButton = styled(AddButton)`
+    background: rgba(0, 0, 0, 0.8);
 `

@@ -23,7 +23,7 @@ const Detail = () => {
                     <span>+</span>
                 </AddButton>
                 <GroupWatchButton>
-
+                    <img src='/assets/images/group-icon.png' alt='' />
                 </GroupWatchButton>
             </Controls>
         </Container>

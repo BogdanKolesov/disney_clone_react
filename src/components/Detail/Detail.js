@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, SubTitle, Description, Background, ImageTitle, Controls, PlayButton, TrailerButton, AddButton, GroupWatchButton } from './Detail.styled';
+import { useParams } from 'react-router-dom'
 
 const Detail = () => {
+    const { id } = useParams()
     return (
         <Container>
             <Background>

@@ -16,10 +16,10 @@ const Movies = ({ content }) => {
                             {data.title}
                         </h4>
                         <Content>
-                            {
-                                data.images.map((image, index) => (
+                            {movies &&
+                                movies.map((movie, index) => (
                                     <Wrap key={index}>
-                                        <img src={image.src} alt={image.alt} />
+                                        <img src={movie.image} alt={movie.alt} />
                                     </Wrap>
                                 ))
                             }

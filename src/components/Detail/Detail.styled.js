@@ -107,5 +107,6 @@ export const Description = styled.p`
     line-height: 1.4;
     font-size: 18px;
     margin-top: 16px;
+    max-width: 900px;
     color: rgb(249, 249, 249);
 `

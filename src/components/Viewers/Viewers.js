@@ -8,6 +8,7 @@ const Viewers = ({ content }) => {
                 content.map((data, index) => (
                     <Wrap key={index}>
                         <img src={data.image} alt={data.alt} />
+
                     </Wrap>
                 ))
             }

@@ -1,7 +1,12 @@
-import React from 'react';
-import { Container, Content, Wrap } from './Movies.styles';
+import React from 'react'
+import { Container, Content, Wrap } from './Movies.styles'
+import { selectMovies } from '../../redux/features/movie/movieSlice'
+import { useSelector } from 'react-redux'
 
 const Movies = ({ content }) => {
+    const movies = useSelector(selectMovies)
+
+
     return (
         <>
             {

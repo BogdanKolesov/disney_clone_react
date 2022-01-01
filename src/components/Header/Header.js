@@ -1,14 +1,27 @@
 import React from 'react';
+import { auth, provider } from '../../firebase';
 import { Link } from 'react-router-dom';
 import { headerData } from '../../data/headerData';
 import { Nav, Logo, NavMenu, UserImg, LoginContainer, Login } from './Header.styles';
-import { selectUserName, selectUserPhoto } from '../../redux/features/user/userSlice'
-import { useSelector } from 'react-redux'
+import { selectUserName, selectUserPhoto, setUserLogin } from '../../redux/features/user/userSlice'
+import { useSelector, useDispatch } from 'react-redux'
 
 const Header = () => {
+    const dispatch = useDispatch()
     const userName = useSelector(selectUserName)
     const userPhoto = useSelector(selectUserPhoto)
 
+    const signIn = () => {
+        auth.signInWithPopup(provider)
+            .then((result) => {
+                let user = result.user
+                dispatch(setUserLogin({
+                    name: user.displayName,
+                    email: user.email,
+                    photo: user.photoURL
+                }))
+            })
+    }
     return (
         <Nav>
             <Logo to='/'>
@@ -17,7 +30,7 @@ const Header = () => {
             {
                 !userName ?
                     <LoginContainer>
-                        <Login>Login</Login>
+                        <Login onClick={signIn}>Login</Login>
                     </LoginContainer>
                     :
                     (<>

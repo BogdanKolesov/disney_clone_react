@@ -67,4 +67,24 @@ export const UserImg = styled.img`
     border-radius: 50%;
     cursor: pointer;
 `
+export const Login = styled.div`
+    cursor: pointer;
+    border: 1px solid #f9f9f9;
+    border-radius: 5px;
+    padding: 8px 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease 0s;
 
+    &:hover{
+        background-color: #f9f9f9;
+        color: #000;
+        border-color: transparent;
+    }
+`
+export const LoginContainer = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+`

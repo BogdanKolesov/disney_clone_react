@@ -1,15 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { auth, provider } from '../../firebase';
 import { Link } from 'react-router-dom';
 import { headerData } from '../../data/headerData';
 import { Nav, Logo, NavMenu, UserImg, LoginContainer, Login } from './Header.styles';
-import { selectUserName, selectUserPhoto, setUserLogin } from '../../redux/features/user/userSlice'
+import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from '../../redux/features/user/userSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
 const Header = () => {
     const dispatch = useDispatch()
     const userName = useSelector(selectUserName)
     const userPhoto = useSelector(selectUserPhoto)
+    const navigate = useNavigate()
 
     const signIn = () => {
         auth.signInWithPopup(provider)
@@ -22,6 +24,15 @@ const Header = () => {
                 }))
             })
     }
+
+    const signOut = () => {
+        auth.signOut()
+            .then(() => {
+                dispatch(setSignOut())
+                navigate('/login')
+            })
+    }
+
     return (
         <Nav>
             <Logo to='/'>
@@ -44,10 +55,11 @@ const Header = () => {
                                 ))
                             }
                         </NavMenu>
-                        <UserImg src='https://sun9-88.userapi.com/impg/GuwxllhGItnrGieIqWheGO4zEnclzSUNBkezow/iBfdiEziTRE.jpg?size=867x1080&quality=96&sign=5b8702ff398afc97941e0980cddb5d8c&type=album' />
+                        <UserImg
+                            onClick={signOut}
+                            src='https://sun9-88.userapi.com/impg/GuwxllhGItnrGieIqWheGO4zEnclzSUNBkezow/iBfdiEziTRE.jpg?size=867x1080&quality=96&sign=5b8702ff398afc97941e0980cddb5d8c&type=album' />
                     </>)
             }
-
         </Nav >
     );
 }

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Container, SubTitle, Description, Background, ImageTitle, Controls, PlayButton, TrailerButton, AddButton, GroupWatchButton } from './Detail.styled';
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import db from '../../firebase'
+import { useNavigate } from 'react-router-dom';
 
 const Detail = () => {
     const { id } = useParams()
-
     const [movie, setMovie] = useState()
+    const navigate = useNavigate()
 
     useEffect(() => {
         db.collection("movies")
@@ -17,6 +18,7 @@ const Detail = () => {
                     setMovie(doc.data())
                 } else {
                     //redirect to Home page
+                    navigate('/home')
                 }
             })
     }, [id])

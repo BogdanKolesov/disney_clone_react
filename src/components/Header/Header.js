@@ -71,7 +71,7 @@ const Header = () => {
                         </NavMenu>
                         <UserImg
                             onClick={signOut}
-                            src='https://sun9-88.userapi.com/impg/GuwxllhGItnrGieIqWheGO4zEnclzSUNBkezow/iBfdiEziTRE.jpg?size=867x1080&quality=96&sign=5b8702ff398afc97941e0980cddb5d8c&type=album' />
+                            src={userPhoto} />
                     </>)
             }
         </Nav >

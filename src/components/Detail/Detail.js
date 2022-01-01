@@ -18,7 +18,7 @@ const Detail = () => {
                     setMovie(doc.data())
                 } else {
                     //redirect to Home page
-                    navigate('/home')
+                    navigate('/')
                 }
             })
     }, [id])

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, provider } from '../../firebase';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,19 @@ const Header = () => {
     const userPhoto = useSelector(selectUserPhoto)
     const navigate = useNavigate()
 
+    useEffect(() => {
+        auth.onAuthStateChanged(async (user) => {
+            if (user) {
+                dispatch(setUserLogin({
+                    name: user.displayName,
+                    email: user.email,
+                    photo: user.photoURL
+                }))
+                navigate('/')
+            }
+        })
+    }, [])
+
     const signIn = () => {
         auth.signInWithPopup(provider)
             .then((result) => {
@@ -22,6 +35,7 @@ const Header = () => {
                     email: user.email,
                     photo: user.photoURL
                 }))
+                navigate('/')
             })
     }
 
